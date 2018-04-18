@@ -1,3 +1,3 @@
 # ProgramadMalditos
-Lista de Productos
-Para practicar Angular 2
+Lista de Productos.
+Para practicar Angular 2.
