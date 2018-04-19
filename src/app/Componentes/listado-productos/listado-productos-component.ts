@@ -9,8 +9,9 @@ import { Producto } from '../../Clases/Producto';
 
 export class ListadoProductoComponent {
     @Input() productos: Array<Producto>;
-
+/*
     displayProducto(producto: Producto) {
+        console.log('ListadoProductoComponent: ');
         console.log(producto);
-    }
+    }*/
 }

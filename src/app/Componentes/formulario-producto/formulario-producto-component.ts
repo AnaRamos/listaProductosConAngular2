@@ -15,6 +15,7 @@ export class FormularioProductoComponent implements OnInit {
 
     public submit() {
         this.onsubmit.emit(this.model);
+        console.log('FormularioProductoComponent: ');
         console.log(this.model);
         this.model = new Producto(0, '', 0, 0);
     }

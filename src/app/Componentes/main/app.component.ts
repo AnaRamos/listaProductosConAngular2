@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../../Clases/Producto';
+import { ProductoService } from '../../Servicio/listaCompraClase-Service';
+
 
 @Component({
   selector: 'app-root',
@@ -10,13 +12,16 @@ export class AppComponent implements OnInit {
   title = 'app';
   productos: Array<Producto> = [];
 
-  constructor() {
+  constructor(private servicio:ProductoService) {
 
   }
 
   ngOnInit() {
-    this.productos.push(new Producto(1,'Memoria USB',150.0,30,'Memoria Micro Sd Adata 64gb Clase 10 Sdhc+ Adaptador Full Hd'));
-    this.productos.push(new Producto(2,'Pendrive USB',180.0,25,'Pendrive Kingston 4 Gb, Usb 3.0 Nuevo En Blister '));
+    this.servicio.getProductos().then(
+      datos => {
+        this.productos = datos;
+      }
+    );
   }
 
   guardar(model: Producto): void {
