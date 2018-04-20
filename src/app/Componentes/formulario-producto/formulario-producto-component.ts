@@ -6,22 +6,25 @@ import { Producto } from '../../Clases/Producto';
     selector: 'formulario-producto',
     templateUrl: 'formulario-producto.html'
 })
+
 export class FormularioProductoComponent implements OnInit {
 
     model: Producto = new Producto(0, '', 0, 0);
     @Output() onsubmit = new EventEmitter<any>();
 
-    constructor() { }
-
+    //--------------------------------------------------------------
+    constructor() { 
+    }
+    //--------------------------------------------------------------
     public submit() {
         this.onsubmit.emit(this.model);
         console.log('FormularioProductoComponent: ');
         console.log(this.model);
         this.model = new Producto(0, '', 0, 0);
     }
-
+    //--------------------------------------------------------------
     ngOnInit() {
         console.log('FormularioProductoComponent inicializado ***********');
     }
-
+    //--------------------------------------------------------------
 }

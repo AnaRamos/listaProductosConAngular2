@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Producto } from '../Clases/Producto';
+import { Producto } from '../../Clases/Producto';
 
 const PRODUCTOS: Array<Producto> = [
     new Producto(1,'Memoria USB',150.0,30,'Memoria Micro Sd Adata 64gb Clase 10 Sdhc+ Adaptador Full Hd'),
